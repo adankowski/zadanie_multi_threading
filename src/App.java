@@ -7,7 +7,8 @@ public class App {
         long tm = System.currentTimeMillis();
 
         for (long i = 1L; i < 100L; i++) {
-            arr.add(new PrimeProducer(i * 100000000000L).call());
+            long prime = new PrimeProducer(i * 100000000000L).call();
+            arr.add(prime);
         }
         System.out.println(arr  + " Computation time: " + (System.currentTimeMillis() - tm) + "ms");
     }
